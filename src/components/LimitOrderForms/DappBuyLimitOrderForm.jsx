@@ -56,6 +56,7 @@ const DappBuyLimitOrderForm = props => {
 
         <InputGroupWrapper
           name="price"
+	  inputmode="decimal"
           onChange={e => onInputChange("BUY", e)}
           onFocus={e => onInputFocus("BUY", e)}
           onBlur={e => onInputBlur("BUY", e)}
@@ -96,6 +97,7 @@ const DappBuyLimitOrderForm = props => {
 
         <IncreaseAndDecreaseGroup
           type="amount"
+	  inputmode="decimal"
           onDecreaseAmount={e => handleDecreaseAmount(e, "BUY")}
           onIncreaseAmount={e => handleIncreaseAmount(e, "BUY")}
         />
