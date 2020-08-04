@@ -56,7 +56,8 @@ const DappSellLimitOrderForm = props => {
 
         <InputGroupWrapper
           name="price"
-          onChange={e => onInputChange("SELL", e)}
+          inputmode="decimal"
+	  onChange={e => onInputChange("SELL", e)}
           onMouseDown={e => onInputFocus("SELL", e)}
           onBlur={e => onInputBlur("SELL", e)}
           value={sellPrice}
@@ -81,7 +82,8 @@ const DappSellLimitOrderForm = props => {
         </InputLabel>
         <InputGroupWrapper
           name="amount"
-          onChange={e => onInputChange("SELL", e)}
+          inputmode="decimal"
+	  onChange={e => onInputChange("SELL", e)}
           onFocus={e => onInputFocus("SELL", e)}
           onBlur={e => onInputBlur("SELL", e)}
           value={sellAmount}
@@ -95,7 +97,7 @@ const DappSellLimitOrderForm = props => {
 
         <IncreaseAndDecreaseGroup
           type="amount"
-          onDecreaseAmount={e => handleDecreaseAmount(e, "SELL")}
+	  onDecreaseAmount={e => handleDecreaseAmount(e, "SELL")}
           onIncreaseAmount={e => handleIncreaseAmount(e, "SELL")}
         />
 
